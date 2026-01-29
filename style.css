@@ -1,5 +1,4 @@
 /* --- Academic Master Style --- */
-
 body { 
     font-family: 'Inter', -apple-system, sans-serif; 
     background-color: #ffffff; 
@@ -15,14 +14,14 @@ nav {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
-nav a { color: #94a3b8; text-decoration: none; margin: 0 20px; font-weight: 600; font-size: 0.9rem; }
+nav a { color: #94a3b8; text-decoration: none; margin: 0 20px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
 nav a.active { color: #ffffff; }
 
 .container { max-width: 1050px; margin: 60px auto; padding: 0 40px; }
 
-/* The Header Layout */
 .academic-header { 
     display: flex; 
     justify-content: space-between; 
@@ -30,8 +29,8 @@ nav a.active { color: #ffffff; }
     gap: 60px; 
 }
 
-.header-text { flex: 1.5; }
-.name { font-family: 'Georgia', serif; font-size: 3.2rem; margin: 0; color: #111; }
+.header-text { flex: 2; }
+.name { font-family: 'Georgia', serif; font-size: 3.2rem; margin: 0; color: #111; font-weight: normal; }
 .current-role { font-size: 1.2rem; color: #64748b; margin-bottom: 25px; }
 
 .contact-box { 
@@ -42,15 +41,15 @@ nav a.active { color: #ffffff; }
     border-left: 5px solid #334155; 
 }
 
-/* IMAGE RESHAPING: This forces the big photo to a specific size */
 .header-photo { flex: 1; display: flex; justify-content: flex-end; }
 
 .main-photo { 
-    width: 100px !important;    /* Fixed Width */
-    height: 200px !important;   /* Fixed Height (Portrait) */
-    object-fit: cover;          /* Crops edges so it doesn't stretch */
-    border-radius: 5px; 
+    width: 300px !important;    /* Reshaped Width */
+    height: 400px !important;   /* Reshaped Height */
+    object-fit: cover;          
+    border-radius: 8px; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: block;             /* Ensures it renders as a block element */
 }
 
 .section-divider { border: 0; border-top: 1px solid #e2e8f0; margin: 40px 0; }
@@ -58,8 +57,7 @@ nav a.active { color: #ffffff; }
 h2 { font-family: 'Georgia', serif; font-size: 1.8rem; margin-bottom: 25px; }
 .bio-text p { margin-bottom: 20px; text-align: justify; font-size: 1.1rem; }
 
-/* Mobile View */
 @media (max-width: 850px) {
     .academic-header { flex-direction: column-reverse; align-items: center; text-align: center; }
-    .main-photo { width: 280px !important; height: 350px !important; margin-bottom: 30px; }
+    .main-photo { width: 250px !important; height: 320px !important; margin-bottom: 30px; }
 }
