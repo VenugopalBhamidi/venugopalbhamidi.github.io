@@ -1,86 +1,58 @@
-/* General Styling */
-body { 
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-    background-color: #f5f7fa; 
-    margin: 0; 
-    color: #2d3436; 
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venugopal Bhamidi | IIT Gandhinagar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">About Me</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+    </nav>
 
-nav { 
-    background: #2d3436; 
-    padding: 1.2rem; 
-    text-align: center; 
-}
-nav a { color: #b2bec3; text-decoration: none; margin: 0 15px; font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
-nav a:hover, nav a.active { color: #fff; }
+    <div class="container">
+        <header class="profile-header">
+            <div class="header-info">
+                <h1 class="name">Venugopal Bhamidi</h1>
+                <p class="role"><strong>Second Year Postgraduate</strong>, Artificial Intelligence </p>
 
-/* Flex Layout */
-.main-layout { 
-    display: flex; 
-    max-width: 1100px; 
-    margin: 50px auto; 
-    gap: 40px; 
-    padding: 0 20px;
-}
+                <div class="details-list">
+                    <p><strong>M.Tech:</strong> IIT Gandhinagar, 2024 - Present (CPI: 9.00) </p>
+                    <p><strong>B.Tech:</strong> IIT Dharwad, 2020-2024 (CPI: 7.91) </p>
+                    
+                    <p class="contact-item"><strong>Email:</strong> venugopal.bhamidi -AT- iitgn.ac.in [cite: 5]</p>
+                    <p class="contact-item"><strong>Website:</strong> <a href="https://venugopalbhamidi.github.io">venugopalbhamidi.github.io</a></p>
+                    <p class="contact-item"><strong>Position:</strong> Senator (M.Tech) & Branch Rep (AI) </p>
+                </div>
+            </div>
+            
+            <div class="header-image">
+                <img src="My_image.jpg" alt="Venugopal Bhamidi" class="academic-pic">
+            </div>
+        </header>
 
-/* Sidebar (Left) */
-.sidebar { 
-    flex: 1; 
-    max-width: 280px; 
-    background: white; 
-    padding: 40px 25px; 
-    border-radius: 16px; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    height: fit-content;
-}
+        <hr class="separator">
 
-.profile-container { text-align: center; }
-.profile-pic { 
-    width: 160px; 
-    height: 160px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    border: 4px solid #f5f7fa; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-}
-
-.name-heading { font-size: 1.4rem; margin: 10px 0; color: #2d3436; text-align: center; }
-.tagline { font-size: 0.85rem; color: #636e72; text-align: center; margin-bottom: 30px; line-height: 1.4; }
-
-.contact-links { border-top: 1px solid #f1f2f6; padding-top: 20px; }
-.contact-links a, .contact-links p { 
-    display: flex;
-    align-items: center;
-    margin: 15px 0; 
-    color: #4a4e69; 
-    text-decoration: none; 
-    font-size: 0.85rem;
-}
-.contact-links i { width: 20px; margin-right: 12px; color: #0984e3; font-size: 1rem; }
-.contact-links a:hover { color: #0984e3; }
-
-/* Content (Right) */
-.content { 
-    flex: 2.5; 
-    background: white; 
-    padding: 50px; 
-    border-radius: 16px; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-h2 { font-size: 1.8rem; color: #2d3436; margin-top: 0; margin-bottom: 30px; position: relative; }
-h2:after { content: ''; display: block; width: 50px; height: 4px; background: #0984e3; margin-top: 10px; border-radius: 2px; }
-
-.bio p { 
-    margin-bottom: 25px; 
-    line-height: 1.8; 
-    font-size: 1.05rem; 
-    color: #4a4e69;
-}
-
-/* Responsive */
-@media (max-width: 850px) {
-    .main-layout { flex-direction: column; align-items: center; }
-    .sidebar { max-width: 100%; width: 100%; box-sizing: border-box; }
-}
+        <main class="content">
+            <section class="about-section">
+                <h2>About Me</h2>
+                <div class="bio">
+                    <p>
+                        I am a postgraduate researcher at <strong>IIT Gandhinagar</strong> specializing in AI. 
+                        My research interests focus on <strong>Empathic Speech Synthesis (TTS)</strong>, <strong>Federated Learning</strong>, 
+                        and building fair, secure machine learning models.
+                    </p>
+                    <p>
+                        Beyond research, I am a <strong>Senator for M.Tech students</strong> and a <strong>Teaching Assistant</strong>. 
+                        I am passionate about creating empathic AI systems that communicate naturally while maintaining 
+                        fairness in decentralized environments.
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
