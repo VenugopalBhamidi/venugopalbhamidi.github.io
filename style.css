@@ -1,12 +1,11 @@
-/* --- Academic Minimalist Master Style --- */
+/* --- Academic Master Style --- */
 
 body { 
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
+    font-family: 'Inter', -apple-system, sans-serif; 
     background-color: #ffffff; 
     color: #333; 
     line-height: 1.7; 
     margin: 0;
-    padding: 0;
 }
 
 nav { 
@@ -16,59 +15,24 @@ nav {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
-    z-index: 1000;
 }
 
-nav a { 
-    color: #94a3b8; 
-    text-decoration: none; 
-    margin: 0 20px; 
-    font-weight: 600; 
-    font-size: 0.9rem; 
-    transition: 0.3s; 
-}
+nav a { color: #94a3b8; text-decoration: none; margin: 0 20px; font-weight: 600; font-size: 0.9rem; }
+nav a.active { color: #ffffff; }
 
-nav a:hover, nav a.active { 
-    color: #ffffff; 
-}
+.container { max-width: 1050px; margin: 60px auto; padding: 0 40px; }
 
-.container { 
-    max-width: 1050px; 
-    margin: 60px auto; 
-    padding: 0 40px; 
-}
-
-/* Header Layout */
+/* The Header Layout */
 .academic-header { 
     display: flex; 
     justify-content: space-between; 
-    align-items: stretch; /* Ensures text and photo align better vertically */
+    align-items: flex-start; 
     gap: 60px; 
-    margin-bottom: 20px;
 }
 
-.header-text { 
-    flex: 1.5; 
-}
-
-.name { 
-    font-family: 'Georgia', serif; 
-    font-size: 3.2rem; 
-    margin: 0 0 5px 0; 
-    color: #111; 
-    font-weight: normal; 
-}
-
-.current-role { 
-    font-size: 1.2rem; 
-    color: #64748b; 
-    margin-bottom: 25px; 
-}
-
-.credential-list p { 
-    margin: 10px 0; 
-    font-size: 1.05rem; 
-}
+.header-text { flex: 1.5; }
+.name { font-family: 'Georgia', serif; font-size: 3.2rem; margin: 0; color: #111; }
+.current-role { font-size: 1.2rem; color: #64748b; margin-bottom: 25px; }
 
 .contact-box { 
     margin-top: 30px; 
@@ -78,65 +42,24 @@ nav a:hover, nav a.active {
     border-left: 5px solid #334155; 
 }
 
-.contact-box i { 
-    width: 25px; 
-    color: #475569; 
-    margin-right: 10px;
-}
-
-.contact-box a { 
-    color: #2563eb; 
-    text-decoration: none; 
-}
-
-/* IMAGE RESHAPING */
-.header-photo { 
-    flex: 1; 
-    display: flex;
-    justify-content: flex-end;
-}
+/* IMAGE RESHAPING: This forces the big photo to a specific size */
+.header-photo { flex: 1; display: flex; justify-content: flex-end; }
 
 .main-photo { 
-    width: 320px;         /* Specific width to mimic the reference image */
-    height: 400px;        /* Taller height for a professional portrait look */
-    object-fit: cover;    
-    border-radius: 4px;   /* Sharper corners for a formal look */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    width: 50px !important;    /* Fixed Width */
+    height: 100px !important;   /* Fixed Height (Portrait) */
+    object-fit: cover;          /* Crops edges so it doesn't stretch */
+    border-radius: 8px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.section-divider { 
-    border: 0; 
-    border-top: 1px solid #e2e8f0; 
-    margin: 40px 0; 
-}
+.section-divider { border: 0; border-top: 1px solid #e2e8f0; margin: 40px 0; }
 
-h2 { 
-    font-family: 'Georgia', serif; 
-    font-size: 1.8rem; 
-    color: #1e293b; 
-    margin-bottom: 25px; 
-}
+h2 { font-family: 'Georgia', serif; font-size: 1.8rem; margin-bottom: 25px; }
+.bio-text p { margin-bottom: 20px; text-align: justify; font-size: 1.1rem; }
 
-.bio-text p { 
-    margin-bottom: 20px; 
-    text-align: justify; 
-    font-size: 1.1rem; 
-    color: #334155;
-}
-
-/* Responsive View */
+/* Mobile View */
 @media (max-width: 850px) {
-    .academic-header { 
-        flex-direction: column-reverse; 
-        text-align: center; 
-    }
-    .header-text { width: 100%; }
-    .contact-box { text-align: left; }
-    .main-photo {
-        width: 100%;
-        max-width: 300px;
-        height: 350px;
-        margin-bottom: 30px;
-    }
-    .name { font-size: 2.5rem; }
+    .academic-header { flex-direction: column-reverse; align-items: center; text-align: center; }
+    .main-photo { width: 280px !important; height: 350px !important; margin-bottom: 30px; }
 }
