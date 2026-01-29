@@ -1,76 +1,79 @@
-/* Clean & Modern Portfolio Style */
+/* Layout Reset */
 body { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-color: #f4f7f6; 
+    background-color: #f0f2f5; 
     margin: 0; 
     color: #333; 
     line-height: 1.6;
 }
 
+/* Navigation Bar */
 nav { 
-    background: #2c3e50; 
-    padding: 1rem; 
+    background: #1a1c1e; 
+    padding: 1.2rem; 
     text-align: center; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+nav a { color: #8e959b; text-decoration: none; margin: 0 15px; font-weight: 500; transition: 0.3s; }
+nav a:hover, nav a.active { color: #ffffff; }
 
-nav a { 
-    color: #ecf0f1; 
-    text-decoration: none; 
-    margin: 0 15px; 
-    font-weight: 500;
-}
-
-nav a.active { 
-    color: #3498db; 
-}
-
-.container { 
-    max-width: 800px; 
+/* Main Wrapper for Sidebar + Content */
+.main-layout { 
+    display: flex; 
+    max-width: 1100px; 
     margin: 40px auto; 
-    background: white; 
-    padding: 40px; 
-    border-radius: 15px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+    gap: 40px; 
+    padding: 20px;
 }
 
-.profile-header { 
+/* Sidebar Styling (Left Side) */
+.sidebar { 
+    flex: 1; 
+    max-width: 300px; 
     text-align: center; 
-    margin-bottom: 30px; 
+    background: white; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    height: fit-content;
 }
 
-/* This controls your image size */
 .profile-pic { 
-    width: 200px; /* Fixed appropriate width */
-    height: 200px; /* Fixed appropriate height */
-    border-radius: 50%; /* Makes it circular */
-    object-fit: cover; /* Prevents stretching */
-    border: 5px solid #fff; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 180px; 
+    height: 180px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid #3498db; 
     margin-bottom: 20px;
 }
 
-h1 { margin: 10px 0; color: #2c3e50; font-size: 2.2rem; }
+.name-heading { font-size: 1.5rem; margin: 10px 0; color: #2c3e50; }
+.tagline { font-size: 0.95rem; color: #7f8c8d; margin-bottom: 25px; }
 
-.tagline { 
-    color: #7f8c8d; 
-    font-size: 1.1rem; 
-    font-style: italic; 
-    margin-bottom: 20px; 
+.contact-links { text-align: left; font-size: 0.9rem; }
+.contact-links a, .contact-links p { 
+    display: block; 
+    margin: 12px 0; 
+    color: #555; 
+    text-decoration: none; 
+    word-wrap: break-word; 
+}
+.contact-links span { margin-right: 8px; font-size: 1.1rem; }
+.contact-links a:hover { color: #3498db; }
+
+/* Main Content Styling (Right Side) */
+.content { 
+    flex: 2; 
+    background: white; 
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.bio p { 
-    margin-bottom: 20px; 
-    text-align: justify;
-}
+h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 0; }
+.bio p { margin-bottom: 20px; text-align: justify; font-size: 1.05rem; }
 
-.footer { 
-    text-align: center; 
-    margin-top: 40px; 
-    padding-top: 20px; 
-    border-top: 1px solid #eee; 
-    font-size: 0.9rem;
-    color: #95a5a6;
+/* Mobile View: Stack them vertically */
+@media (max-width: 768px) {
+    .main-layout { flex-direction: column; align-items: center; }
+    .sidebar { max-width: 100%; }
 }
-
-a { color: #3498db; text-decoration: none; }
