@@ -1,58 +1,159 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venugopal Bhamidi | IIT Gandhinagar</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav>
-        <a href="index.html" class="active">About Me</a>
-        <a href="publications.html">Publications</a>
-        <a href="projects.html">Projects</a>
-    </nav>
+/* --- Academic Minimalist Master Style --- */
 
-    <div class="container">
-        <header class="profile-header">
-            <div class="header-info">
-                <h1 class="name">Venugopal Bhamidi</h1>
-                <p class="role"><strong>Second Year Postgraduate</strong>, Artificial Intelligence </p>
+/* 1. General Page Settings */
+body { 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
+    background-color: #ffffff; 
+    color: #333; 
+    line-height: 1.7; 
+    margin: 0;
+    padding: 0;
+}
 
-                <div class="details-list">
-                    <p><strong>M.Tech:</strong> IIT Gandhinagar, 2024 - Present (CPI: 9.00) </p>
-                    <p><strong>B.Tech:</strong> IIT Dharwad, 2020-2024 (CPI: 7.91) </p>
-                    
-                    <p class="contact-item"><strong>Email:</strong> venugopal.bhamidi -AT- iitgn.ac.in [cite: 5]</p>
-                    <p class="contact-item"><strong>Website:</strong> <a href="https://venugopalbhamidi.github.io">venugopalbhamidi.github.io</a></p>
-                    <p class="contact-item"><strong>Position:</strong> Senator (M.Tech) & Branch Rep (AI) </p>
-                </div>
-            </div>
-            
-            <div class="header-image">
-                <img src="My_image.jpg" alt="Venugopal Bhamidi" class="academic-pic">
-            </div>
-        </header>
+/* 2. Navigation Bar */
+nav { 
+    background: #1a1c1e; 
+    padding: 1rem; 
+    text-align: center; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav a { 
+    color: #94a3b8; 
+    text-decoration: none; 
+    margin: 0 20px; 
+    font-weight: 600; 
+    font-size: 0.9rem; 
+    transition: 0.3s; 
+}
+nav a:hover, nav a.active { 
+    color: #ffffff; 
+}
 
-        <hr class="separator">
+/* 3. Main Container */
+.container { 
+    max-width: 1000px; 
+    margin: 60px auto; 
+    padding: 0 40px; 
+}
 
-        <main class="content">
-            <section class="about-section">
-                <h2>About Me</h2>
-                <div class="bio">
-                    <p>
-                        I am a postgraduate researcher at <strong>IIT Gandhinagar</strong> specializing in AI. 
-                        My research interests focus on <strong>Empathic Speech Synthesis (TTS)</strong>, <strong>Federated Learning</strong>, 
-                        and building fair, secure machine learning models.
-                    </p>
-                    <p>
-                        Beyond research, I am a <strong>Senator for M.Tech students</strong> and a <strong>Teaching Assistant</strong>. 
-                        I am passionate about creating empathic AI systems that communicate naturally while maintaining 
-                        fairness in decentralized environments.
-                    </p>
-                </div>
-            </section>
-        </main>
-    </div>
-</body>
-</html>
+/* 4. Split Header: Text on Left, Image on Right */
+.academic-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 50px; 
+    margin-bottom: 20px;
+}
+
+.header-text { 
+    flex: 2; 
+}
+
+.name { 
+    font-family: 'Georgia', serif; 
+    font-size: 3rem; 
+    margin: 0 0 10px 0; 
+    color: #111; 
+    font-weight: normal; 
+}
+
+.current-role { 
+    font-size: 1.15rem; 
+    color: #64748b; 
+    margin-bottom: 25px; 
+}
+
+/* 5. Credential List Styling */
+.credential-list p { 
+    margin: 8px 0; 
+    font-size: 1.05rem; 
+}
+
+.contact-box { 
+    margin-top: 30px; 
+    padding: 20px; 
+    background: #f8fafc; 
+    border-radius: 10px; 
+    border-left: 5px solid #334155; 
+}
+
+.contact-box i { 
+    width: 25px; 
+    color: #475569; 
+    margin-right: 10px;
+}
+
+.contact-box a { 
+    color: #2563eb; 
+    text-decoration: none; 
+}
+.contact-box a:hover { 
+    text-decoration: underline; 
+}
+
+/* 6. IMAGE RESHAPING: This fixes the "Big Image" problem */
+.header-photo { 
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-photo { 
+    width: 280px;         /* Fixed width */
+    height: 350px;        /* Fixed height for academic portrait look */
+    object-fit: cover;    /* Crops the image to fit without stretching */
+    border-radius: 8px;   /* Clean, slightly rounded corners */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+}
+
+/* 7. Section Dividers and Bio */
+.section-divider { 
+    border: 0; 
+    border-top: 1px solid #e2e8f0; 
+    margin: 50px 0; 
+}
+
+h2 { 
+    font-family: 'Georgia', serif; 
+    font-size: 1.8rem; 
+    color: #1e293b; 
+    margin-bottom: 20px; 
+}
+
+.bio-text p { 
+    margin-bottom: 20px; 
+    text-align: justify; 
+    font-size: 1.1rem; 
+    color: #334155;
+}
+
+/* 8. Mobile Responsiveness */
+@media (max-width: 850px) {
+    .academic-header { 
+        flex-direction: column-reverse; 
+        align-items: center; 
+        text-align: center; 
+    }
+    
+    .header-text { 
+        width: 100%; 
+    }
+    
+    .contact-box { 
+        text-align: left; 
+    }
+    
+    .main-photo {
+        width: 220px;
+        height: 280px;
+        margin-bottom: 30px;
+    }
+    
+    .name { 
+        font-size: 2.4rem; 
+    }
+}
