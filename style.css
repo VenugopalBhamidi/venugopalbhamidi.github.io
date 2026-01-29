@@ -46,10 +46,10 @@ nav a.active { color: #ffffff; }
 .header-photo { flex: 1; display: flex; justify-content: flex-end; }
 
 .main-photo { 
-    width: 0px !important;    /* Fixed Width */
-    height: 00px !important;   /* Fixed Height (Portrait) */
+    width: 10px !important;    /* Fixed Width */
+    height: 20px !important;   /* Fixed Height (Portrait) */
     object-fit: cover;          /* Crops edges so it doesn't stretch */
-    border-radius: 8px; 
+    border-radius: 0px; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
